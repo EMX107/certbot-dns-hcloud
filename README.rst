@@ -26,8 +26,8 @@ certbot's command line:
 ==================================== ==============================================
 ``--authenticator dns-hcloud``       select the authenticator plugin (Required)
 
-``--dns-hcloud-credentials``         ispconfig Remote User credentials
-                                     INI file. (Required)
+``--dns-hcloud-credentials``         Hetzner Console API credentials INI file.
+                                     (Required)
 
 ``--dns-hcloud-propagation-seconds`` | waiting time for DNS to propagate before asking
                                      | the ACME server to verify the DNS record.
