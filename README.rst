@@ -73,9 +73,9 @@ To acquire a single certificate for both ``example.com`` and
 .. code-block:: bash
 
    certbot certonly \
-     --authenticator certbot-dns-hcloud:dns-hcloud \
-     --certbot-dns-hcloud:dns-hcloud-credentials /etc/letsencrypt/.secrets/hetzner/certbot.ini \
-     --certbot-dns-hcloud:dns-hcloud-propagation-seconds 900 \
+     --authenticator dns-hcloud \
+     --dns-hcloud-credentials /etc/letsencrypt/.secrets/hetzner/certbot.ini \
+     --dns-hcloud-propagation-seconds 900 \
      -d 'example.com' \
      -d '*.example.com'
 
@@ -102,9 +102,9 @@ Once that's finished, the application can be run as follows::
        -v /etc/letsencrypt:/etc/letsencrypt \
        --cap-drop=all \
        certbot/dns-hcloud certonly \
-       --authenticator certbot-dns-hcloud:dns-hcloud \
-       --certbot-dns-hcloud:dns-hcloud-propagation-seconds 900 \
-       --certbot-dns-hcloud:dns-hcloud-credentials \
+       --authenticator dns-hcloud \
+       --dns-hcloud-propagation-seconds 900 \
+       --dns-hcloud-credentials \
            /etc/letsencrypt/.secrets/domain.tld.ini \
        --no-self-upgrade \
        --keep-until-expiring --non-interactive --expand \
