@@ -31,7 +31,7 @@ certbot's command line:
 
 ``--dns-hcloud-propagation-seconds`` | waiting time for DNS to propagate before asking
                                      | the ACME server to verify the DNS record.
-                                     | (Default: 120, Recommended: >= 600)
+                                     | (Default: 60, Recommended: >= 120)
 ==================================== ==============================================
 
 
