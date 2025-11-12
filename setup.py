@@ -8,7 +8,7 @@ install_requires = [
 
 setup(
     name='certbot-dns-hcloud',
-    version='1.0.0',
+    version='1.0.1',
     author='EMX107',
     license='Apache License 2.0',
     python_requires='>=3.13',
@@ -16,7 +16,7 @@ setup(
     install_requires=install_requires,
     entry_points={
         'certbot.plugins': [
-            'dns-hcloud = certbot_dns_hcloud._internal.dns_hcloud:Authenticator'
+            'dns-hcloud = certbot_dns_hcloud.dns_hcloud:Authenticator'
         ]
     },
 )
