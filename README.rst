@@ -23,19 +23,16 @@ Named Arguments
 To start using DNS authentication for HCloud, pass the following arguments on
 certbot's command line:
 
-======================================================= ==============================================
-``--authenticator certbot-dns-hcloud:dns-hcloud``       select the authenticator plugin (Required)
+==================================== ==============================================
+``--authenticator dns-hcloud``       select the authenticator plugin (Required)
 
-``--certbot-dns-hcloud:dns-hcloud-credentials``         ispconfig Remote User credentials
-                                                        INI file. (Required)
+``--dns-hcloud-credentials``         ispconfig Remote User credentials
+                                     INI file. (Required)
 
-``--certbot-dns-hcloud:dns-hcloud-propagation-seconds`` | waiting time for DNS to propagate before asking
-                                                        | the ACME server to verify the DNS record.
-                                                        | (Default: 120, Recommended: >= 600)
-======================================================= ==============================================
-
-(Note that the verbose and seemingly redundant ``certbot-dns-ispconfig:`` prefix
-is currently imposed by certbot for external plugins.)
+``--dns-hcloud-propagation-seconds`` | waiting time for DNS to propagate before asking
+                                     | the ACME server to verify the DNS record.
+                                     | (Default: 120, Recommended: >= 600)
+==================================== ==============================================
 
 
 Credentials
@@ -45,10 +42,10 @@ An example ``credentials.ini`` file:
 
 .. code-block:: ini
 
-   certbot_dns_hcloud:dns_hcloud_api_token = j8foaU8u2irpupAHwaf...
+   dns_hcloud_api_token = j8foaU8u2irpupAHwaf...
 
 The path to this file can be provided interactively or using the
-``--certbot-dns-hcloud:dns-hcloud-credentials`` command-line argument. Certbot
+``--dns-hcloud-credentials`` command-line argument. Certbot
 records the path to this file for use during renewal, but does not store the
 file's contents.
 
