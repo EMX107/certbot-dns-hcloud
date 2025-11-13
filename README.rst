@@ -80,6 +80,9 @@ To acquire a single certificate for both ``example.com`` and
      -d '*.example.com'
 
 
-It is suggested to secure the folder as follows::
-chown root:root /etc/letsencrypt/.secrets
-chmod 600 /etc/letsencrypt/.secrets
+It is suggested to secure the folder as follows:
+
+.. code-block:: bash
+
+   chown root:root /etc/letsencrypt/.secrets
+   chmod 600 /etc/letsencrypt/.secrets
