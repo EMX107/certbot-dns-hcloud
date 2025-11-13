@@ -80,36 +80,6 @@ To acquire a single certificate for both ``example.com`` and
      -d '*.example.com'
 
 
-Docker
-------
-
-In order to create a docker container with a certbot-dns-ispconfig installation,
-create an empty directory with the following ``Dockerfile``:
-
-.. code-block:: docker
-
-    FROM certbot/certbot
-    RUN pip install git+https://github.com/EMX107/certbot-dns-hcloud
-
-Proceed to build the image::
-
-    docker build -t certbot/dns-hcloud .
-
-Once that's finished, the application can be run as follows::
-
-    docker run --rm \
-       -v /var/lib/letsencrypt:/var/lib/letsencrypt \
-       -v /etc/letsencrypt:/etc/letsencrypt \
-       --cap-drop=all \
-       certbot/dns-hcloud certonly \
-       --authenticator dns-hcloud \
-       --dns-hcloud-propagation-seconds 900 \
-       --dns-hcloud-credentials \
-           /etc/letsencrypt/.secrets/domain.tld.ini \
-       --no-self-upgrade \
-       --keep-until-expiring --non-interactive --expand \
-       -d example.com -d '*.example.com'
-
 It is suggested to secure the folder as follows::
 chown root:root /etc/letsencrypt/.secrets
 chmod 600 /etc/letsencrypt/.secrets
