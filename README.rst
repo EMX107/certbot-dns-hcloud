@@ -149,9 +149,10 @@ Install ``certbot`` and ``certbot-dns-hcloud`` inside a virtual environment
 If you did not replace the ``<PLACE TOKEN HERE>`` with your Hetzner Console API token, edit the
 file with your prefered text editor i.e. ``nvim``, ``vi`` or ``nano``.
 
-**Caution:** You have to use a ``Hetzner Cloud`` API token. Dont't confuse with the old ``konsolH``
-API token. The DNS console has been moved from ``konsolH`` to ``Hetzner Console`` and now you have
-to use the ``Hetzner Cloud API`` to manage your DNS zones.
+**Caution:** You have to use a `Hetzner Console <https://console.hetzner.com/>`_ API token. Dont't
+confuse with the old `konsoleH <https://konsoleh.hetzner.com/>`_ API token. The DNS console has been
+moved from ``konsoleH`` to ``Hetzner Console`` and now you have to use the ``Hetzner Cloud API`` to
+manage your DNS zones.
 
 
 Test if the installation was successful
