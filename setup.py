@@ -11,7 +11,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='certbot-dns-hcloud',
-    version='1.1.0',
+    version='1.1.1',
     author='EMX107',
     license='Apache License 2.0',
     long_description=description,
