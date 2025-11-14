@@ -49,13 +49,12 @@ The path to this file can be provided interactively or using the
 records the path to this file for use during renewal, but does not store the
 file's contents.
 
-.. CAUTION::
-   You should protect these API credentials as you would the
-   password to your ispconfig account. Users who can read this file can use these
-   credentials to issue arbitrary API calls on your behalf. Users who can cause
-   Certbot to run using these credentials can complete a ``dns-01`` challenge to
-   acquire new certificates or revoke existing certificates for associated
-   domains, even if those domains aren't being managed by this server.
+**Caution:** You should protect these API credentials as you would the
+password to your ispconfig account. Users who can read this file can use these
+credentials to issue arbitrary API calls on your behalf. Users who can cause
+Certbot to run using these credentials can complete a ``dns-01`` challenge to
+acquire new certificates or revoke existing certificates for associated
+domains, even if those domains aren't being managed by this server.
 
 Certbot will emit a warning if it detects that the credentials file can be
 accessed by other users on your system. The warning reads "Unsafe permissions
@@ -150,10 +149,9 @@ Install ``certbot`` and ``certbot-dns-hcloud`` inside a virtual environment
 If you did not replace the ``<PLACE TOKEN HERE>`` with your Hetzner Console API token, edit the
 file with your prefered text editor i.e. ``nvim``, ``vi`` or ``nano``.
 
-.. CAUTION::
-   You have to use a ``Hetzner Cloud`` API token. Dont't confuse with the old ``konsolH`` API
-   token. The DNS console has been moved from ``konsolH`` to ``Hetzner Console`` and now you have
-   to use the ``Hetzner Cloud API`` to manage your DNS zones.
+**Caution:** You have to use a ``Hetzner Cloud`` API token. Dont't confuse with the old ``konsolH``
+API token. The DNS console has been moved from ``konsolH`` to ``Hetzner Console`` and now you have
+to use the ``Hetzner Cloud API`` to manage your DNS zones.
 
 
 Test if the installation was successful
