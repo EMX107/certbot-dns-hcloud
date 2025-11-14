@@ -6,11 +6,16 @@ install_requires = [
     'setuptools'
 ]
 
+with open('README.rst', 'r') as f:
+    description = f.read()
+
 setup(
     name='certbot-dns-hcloud',
-    version='1.0.3',
+    version='1.1.0',
     author='EMX107',
     license='Apache License 2.0',
+    long_description=description,
+    long_description_content_type='text/x-rst',
     url='https://github.com/EMX107/certbot-dns-hcloud',
     python_requires='>=3.13',
     packages=find_packages(),
