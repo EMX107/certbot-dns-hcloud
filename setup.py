@@ -11,6 +11,7 @@ setup(
     version='1.0.2',
     author='EMX107',
     license='Apache License 2.0',
+    url='https://github.com/EMX107/certbot-dns-hcloud',
     python_requires='>=3.13',
     include_package_data=True,
     install_requires=install_requires,
