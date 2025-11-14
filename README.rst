@@ -131,8 +131,7 @@ Install ``certbot`` and ``certbot-dns-hcloud`` inside a virtual environment
 
    # install certbot
    /opt/certbot/bin/python -m pip install --upgrade pip
-   /opt/certbot/bin/python -m pip install certbot
-   /opt/certbot/bin/python -m pip install certbot-dns-hcloud
+   /opt/certbot/bin/python -m pip install certbot certbot-dns-hcloud
    
    # create credentials file
    mkdir -p ~/.secrets/hetzner
