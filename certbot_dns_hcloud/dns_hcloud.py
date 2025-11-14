@@ -35,8 +35,8 @@ class Authenticator(dns_common.DNSAuthenticator):
         add('credentials', help='Hetzner Console credentials INI file.')
     
     def more_info(self) -> str:
-        return ('This plugin configures a DNS TXT record to respond to a dns-01 challenge using '
-                'the Hetzner Console API.')
+        return 'This plugin configures a DNS TXT record to respond to a dns-01 challenge using ' \
+               'the Hetzner Console API.'
     
     def _validate_credentials(self, credentials: CredentialsConfiguration) -> None:
         token = credentials.conf('api-token')
@@ -150,8 +150,8 @@ class _HClient:
         except hcloud.HCloudException as e:
             logger.debug('Encountered HCloudException fetching zones from API to find zone: %s',
                          e)
-            raise errors.PluginError('Encountered HCloudException fetching zones to find zone:'
-                                     ' %s', e)
+            raise errors.PluginError('Encountered HCloudException fetching zones to find zone:' \
+                                     ' %s'.format(e))
 
         for zone_name in zone_name_guesses:
             for zone in zones:

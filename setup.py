@@ -8,7 +8,7 @@ install_requires = [
 
 setup(
     name='certbot-dns-hcloud',
-    version='1.0.1',
+    version='1.0.2',
     author='EMX107',
     license='Apache License 2.0',
     python_requires='>=3.13',
