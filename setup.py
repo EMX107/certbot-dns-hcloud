@@ -7,14 +7,15 @@ install_requires = [
 ]
 
 with open('README.rst', 'r') as f:
-    description = f.read()
+    long_description = f.read()
 
 setup(
     name='certbot-dns-hcloud',
-    version='1.1.1',
+    version='1.1.2',
     author='EMX107',
     license='Apache License 2.0',
-    long_description=description,
+    description='This is a certbot plugin to perform dns-01 authentication using the Hetzner Cloud (Console) API',
+    long_description=long_description,
     long_description_content_type='text/x-rst',
     url='https://github.com/EMX107/certbot-dns-hcloud',
     python_requires='>=3.13',

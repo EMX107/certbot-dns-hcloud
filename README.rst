@@ -14,7 +14,7 @@ Installation
 
 ::
 
-    pip install git+https://github.com/EMX107/certbot-dns-hcloud
+    pip install certbot-dns-hcloud
 
 
 Named Arguments
@@ -132,7 +132,7 @@ Install ``certbot`` and ``certbot-dns-hcloud`` inside a virtual environment
    # install certbot
    /opt/certbot/bin/python -m pip install --upgrade pip
    /opt/certbot/bin/python -m pip install certbot
-   /opt/certbot/bin/python -m pip install git+https://github.com/EMX107/certbot-dns-hcloud
+   /opt/certbot/bin/python -m pip install certbot-dns-hcloud
    
    # create credentials file
    mkdir -p ~/.secrets/hetzner
@@ -199,9 +199,9 @@ Setup ``cron job`` for automated renewal
    # renewal twice a day
    echo "0 0,12 * * * certbot /opt/certbot/bin/python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
 
-Setup ``cron job`` for automated updatesd
+Setup ``cron job`` for automated updates
 
 .. code-block:: bash
 
    # update every Monday at 6 am
-   echo "0 6 * * 1 certbot /opt/certbot/bin/python -m pip install --upgrade certbot git+https://github.com/EMX107/certbot-dns-hcloud" | sudo tee -a /etc/crontab > /dev/null
+   echo "0 6 * * 1 certbot /opt/certbot/bin/python -m pip install --upgrade certbot certbot-dns-hcloud" | sudo tee -a /etc/crontab > /dev/null
