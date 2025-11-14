@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 install_requires = [
     'hcloud>=2.11.0',
@@ -13,6 +13,7 @@ setup(
     license='Apache License 2.0',
     url='https://github.com/EMX107/certbot-dns-hcloud',
     python_requires='>=3.13',
+    packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     entry_points={
